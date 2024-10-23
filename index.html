@@ -36,7 +36,6 @@
         <div id="command-output"></div>
         <input type="text" id="command-input" class="input-field" placeholder="Enter command">
     </div>
-
     <script>
         document.getElementById('command-input').addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
@@ -49,79 +48,82 @@
             const inputField = document.getElementById('command-input');
             const outputDiv = document.getElementById('command-output');
             const command = inputField.value.trim();
-
             const p = document.createElement('p');
             p.textContent = 'C:\\> ' + command;
             outputDiv.appendChild(p);
 
-            // Add your command logic here
+            let response;
             switch (command.toLowerCase()) {
-		case 'still alive':
-                    outputDiv.innerHTML += '<p>theres no point crying over every mistake, gotta keep on trying until we run out of power.</p>';
+                case 'still alive':
+                    response = 'theres no point crying over every mistake, gotta keep on trying until we run out of power.';
                     break;
                 case 'project nano 1':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 001. runtime: 53:05:32. omen: simple white ipod nano. status: OBSOLETE/DECEASED</p>';
-		    break;
+                    response = 'afterburn nano system model 001. runtime: 53:05:32. omen: simple white ipod nano. status: OBSOLETE/DECEASED.';
+                    break;
                 case 'project nano 2':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 002. runtime: 08:22:02. omen: rounded black ipod nano. status: OBSOLETE/DECEASED</p>';
-		    break;
+                    response = 'afterburn nano system model 002. runtime: 08:22:02. omen: rounded black ipod nano. status: OBSOLETE/DECEASED.';
+                    break;
                 case 'project nano 3':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 003. runtime: 43:05:32. omen: red short stubby ipod nano. status: OBSOLETE/DECEASED</p>';
-		    break;
+                    response = 'afterburn nano system model 003. runtime: 43:05:32. omen: red short stubby ipod nano. status: OBSOLETE/DECEASED.';
+                    break;
                 case 'project nano 4':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 004. runtime: 03:06:12.  omen: long yellow ipod nano, defective battery. status: OBSOLETE/DECEASED</p>';
-		    break;
+                    response = 'afterburn nano system model 004. runtime: 03:06:12. omen: long yellow ipod nano, defective battery. status: OBSOLETE/DECEASED.';
+                    break;
                 case 'project nano 5':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 005. runtime: 22:23:26. omen: orange ipod nano with high definition camera on back, defective battery. status: OBSOLETE/DECEASED</p>';
-		    break;
+                    response = 'afterburn nano system model 005. runtime: 22:23:26. omen: orange ipod nano with high definition camera on back, defective battery. status: OBSOLETE/DECEASED.';
+                    break;
                 case 'project nano 6':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 006. runtime: 43:05:32. omen: green short stubby ipod nano with no clickwheel. status: OBSOLETE/LOST</p>';
-		    break;
+                    response = 'afterburn nano system model 006. runtime: 43:05:32. omen: green short stubby ipod nano with no clickwheel. status: OBSOLETE/LOST.';
+                    break;
                 case 'project nano 7':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 007. runtime: UNABLE TO RETRIVE. omen: grey ipod nano simular to ipod touch, last nano to use one of thermals designs. status: UNKNOWN.</p>';
-		    break;
+                    response = 'afterburn nano system model 007. runtime: UNABLE TO RETRIVE. omen: grey ipod nano similar to ipod touch, last nano to use one of thermals designs. status: UNKNOWN.';
+                    break;
                 case 'project nano 8':
-                    outputDiv.innerHTML += '<p>TRACKER NOT FOUND.</p>';
-		    break;
+                    response = 'TRACKER NOT FOUND.';
+                    break;
                 case 'project nano nanobot':
-                    outputDiv.innerHTML += '<p>afterburn nano system model 101. runtime: CURRENTLY ACTIVE. omen: mass produced orange ipod nano based on 007 with some improvments. status: IN PRODUCTION.</p>';
-		    break;
-		case 'project nano':
-                    outputDiv.innerHTML += '<p>project nano is designed to extend a soul's lifespan, to request more information specify model number.</p>';
-		    break;
+                    response = 'afterburn nano system model 101. runtime: CURRENTLY ACTIVE. omen: mass produced orange ipod nano based on 007 with some improvements. status: IN PRODUCTION.';
+                    break;
+                case 'project nano':
+                    response = 'project nano is designed to extend a soul\'s lifespan, to request more information specify model number.';
+                    break;
                 case 'employee defence system':
-                    outputDiv.innerHTML += '<p>UNAUTHORIZED</p>';
-		    break;
+                    response = 'UNAUTHORIZED.';
+                    break;
                 case 'skibidi':
-                    outputDiv.innerHTML += '<p>9 you know your not allowed on my computer. -bill</p>';
-		    break;
+                    response = '9 you know your not allowed on my computer. -bill';
+                    break;
                 case 'ESSA':
-                    outputDiv.innerHTML += '<p>UNAUTHORIZED</p>';
-		    break;
+                    response = 'UNAUTHORIZED.';
+                    break;
                 case 'rm -rf':
-                    outputDiv.innerHTML += '<p>COMMAND OVERRULED BY USER: E.S.S.A</p>';
-		    break;
+                    response = 'COMMAND OVERRULED BY USER: E.S.S.A.';
+                    break;
                 case 'whoami':
-                    outputDiv.innerHTML += '<p>billdollar</p>';
-		    break
+                    response = 'billdollar.';
+                    break;
                 case 'fart':
-                    outputDiv.innerHTML += '<p>poopypoopyfartyfart.</p>';
-		    break
+                    response = 'poopypoopyfartyfart.';
+                    break;
                 case 'thecakeisalie':
-                    outputDiv.innerHTML += '<p>the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is near.</p>';
-		    break;
+                    response = 'the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is near.';
+                    break;
                 case 'date':
-                    outputDiv.innerHTML += '<p>' + new Date() + '</p>';
+                    response = new Date().toString();
                     break;
                 case 'clear':
                     outputDiv.innerHTML = '';
+                    return;
+                case 'keeping tabs':
+                    response = ' I never lose track of a good employee. <img src="PC.png" alt="PC">';
                     break;
-        	case 'keeping tabs':
-            	    outputDiv.innerHTML += '<p> I never lose track of a good employee. <p><img src="PC.png" alt="PC">';
-            	    break;
                 default:
-                    outputDiv.innerHTML += '<p>Command not recognized</p>';
+                    response = 'Command not recognized';
             }
+
+            const responseP = document.createElement('p');
+            responseP.innerHTML = response;
+            outputDiv.appendChild(responseP);
         }
     </script>
 </body>
