@@ -54,9 +54,6 @@
 
             let response;
             switch (command.toLowerCase()) {
-                case 'still alive':
-                    response = 'theres no point crying over every mistake, gotta keep on trying until we run out of power.';
-                    break;
                 case 'tgi':
                     response = 'thank you for choosing afterburn graphics team.';
                     window.location.assign("https://thybytecast.github.io/EDS-GUI/");
@@ -120,6 +117,12 @@
                     return;
                 case 'keeping tabs':
                     response = ' I never lose track of a good employee. <img src="PC.png" alt="PC">';
+                    break;
+                case 'dir':
+                    response = 'thecakeisalie, essa, employee defence system, project nano, tgi';
+                    break;
+                case 'help':
+                    response = 'dir, keeping tabs, clearm date, whoami, rm -rf';
                     break;
                 default:
                     response = 'Command not recognized';
