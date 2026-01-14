@@ -58,6 +58,10 @@
                     response = 'thank you for choosing afterburn graphics team.';
                     window.location.assign("https://thybytecast.github.io/EDS-GUI/");
                     break;
+                case 'cd freeman'
+                    response = 'opening directory...';
+                    window.location.assign("https://thybytecast.github.io/EDS-active-terminal/freeman.html");
+                    break;
                 case "aperture science":
                     response = "Aperture Science: Parent company of Afterburn labratories and Arbeit Communications. portal, gel testing facility. It is also the hosting facility of glados the one who sees all.";
                     break;
@@ -134,7 +138,16 @@
                     response = 'thecakeisalie, essa, employee defence system, project nano, tgi, radiator, employee registry, aperture science, arbeit communications, glados, afterburn labratories';
                     break;
                 case 'help':
-                    response = 'dir, keeping tabs, clear, date, whoami, rm -rf';
+                    response = 'dir, keeping tabs, clear, date, whoami, cd, list, rm -rf';
+                    break;
+                case 'list':
+                    response = 'freeman, root';
+                    break;
+                case 'cd':
+                    response = 'please specify directory';
+                    break;
+                case 'cd root':
+                    response = 'UNAUTHORIZED';
                     break;
                 case 'homosexual syringe':
                     response = 'did you mean: gordon freeman?';
@@ -166,6 +179,7 @@
     </script>
 </body>
 </html>
+
 
 
 
