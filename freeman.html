@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Prompt</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 60%;
+            height: 50%;
+            border: 1px solid green;
+            padding: 20px;
+            box-shadow: 0 0 10px green;
+        }
+        .input-field {
+            width: 100%;
+            background-color: black;
+            color: green;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="command-output"></div>
+        <input type="text" id="command-input" class="input-field" placeholder="Enter command">
+    </div>
+    <script>
+        document.getElementById('command-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                executeCommand();
+                this.value = '';
+            }
+        });
+
+        function executeCommand() {
+            const inputField = document.getElementById('command-input');
+            const outputDiv = document.getElementById('command-output');
+            const command = inputField.value.trim();
+            const p = document.createElement('p');
+            p.textContent = 'C:\\> ' + command;
+            outputDiv.appendChild(p);
+
+            let response;
+            switch (command.toLowerCase()) {
+                case 'cd ..':
+                    response = 'thank you for choosing afterburn.';
+                    window.location.assign("https://thybytecast.github.io/EDS-active-terminal/");
+                    break;
+                case "john":
+                    response = "8's brother and thus MY brother in law. been trying to contact him for a while now, be he ignores me whenever given the chance. 8 refuses to tell me anything about him either.";
+                    break;
+                case "gordon":
+                    response = "8's old name. he was a engineer at afterburn. in terms of family, both of his parents are dead and i still cant contact his brother.";
+                    break;
+                case 'skibidi':
+                    response = '9 you know your not allowed on my computer. -bill';
+                    break;
+                case 'rm -rf':
+                    response = 'COMMAND OVERRULED BY USER: E.S.S.A.';
+                    break;
+                case 'whoami':
+                    response = 'billdollar.';
+                    break;
+                case 'fart':
+                    response = 'poopypoopyfartyfart.';
+                    break;
+                case 'list':
+                    response = '..';
+                    break;
+                case 'date':
+                    response = new Date().toString();
+                    break;
+                case 'clear':
+                    outputDiv.innerHTML = '';
+                    return;
+                case 'keeping tabs':
+                    response = ' I never lose track of a good employee. <img src="PC.png" alt="PC">';
+                    break;
+                case 'dir':
+                    response = '.., Gordon, John';
+                    break;
+                case 'help':
+                    response = 'dir, keeping tabs, clear, date, whoami, cd, list, rm -rf';
+                    break;
+                default:
+                    response = 'Command not recognized';
+            }
+
+            const responseP = document.createElement('p');
+            responseP.innerHTML = response;
+            outputDiv.appendChild(responseP);
+        }
+    </script>
+</body>
+</html>
