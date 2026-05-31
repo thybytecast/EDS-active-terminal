@@ -37,6 +37,7 @@
         <input type="text" id="command-input" class="input-field" placeholder="Enter command">
     </div>
     <script>
+        var numOfAttempts = 0;
         document.getElementById('command-input').addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
                 executeCommand();
@@ -111,7 +112,10 @@
                     response = '9 you know your not allowed on my computer. -bill';
                     break;
                 case 'essa':
-                    response = 'UNAUTHORIZED.';
+                    if (++numOfAttempts == 4) 
+                        window.location.href = "http://youareanidiot.cc";
+                    else
+                        response = 'UNAUTHORIZED.';
                     break;
                 case 'rm -rf':
                     response = 'COMMAND OVERRULED BY USER: E.S.S.A.';
